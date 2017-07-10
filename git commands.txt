@@ -1,4 +1,4 @@
 curl -u USER https://api.github.com/user/repos -d '{ "name": "REPO" }'
 
-USER = Montzsuma
-REPO = Workspaces
+USER = Username.
+REPO = Repository name i want to create.

@@ -7,7 +7,7 @@
     "showOutput": "always",
     "suppressTaskName": true,
     "echoCommand": true,
-    
+
     "tasks": 
     [
         {

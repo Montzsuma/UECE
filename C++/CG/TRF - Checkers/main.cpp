@@ -3,7 +3,6 @@
 int main(int argc, char **argv)
 {
 	initialize_world();
-	//printTests();
 	resetKeys();
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);

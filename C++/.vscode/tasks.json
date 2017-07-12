@@ -1,0 +1,40 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+
+    "version": "0.1.0",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "echoCommand": true,
+    "runner": "terminal",
+
+    "tasks": 
+    [
+        {
+            "taskName": "Build",
+            "command": "",
+            "isBuildCommand": true,
+            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename}"]
+        },
+
+        {
+            "taskName": "Build & Run (OpenGL)",
+            "isBuildCommand": true,
+            "command": "",
+            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} -lopengl32 -lglut32 -lglu32 -lwinmm -lgdi32 && ${fileBasenameNoExtension}"]
+        },
+
+        {
+            "taskName": "Run",
+            "command": "cd ${fileDirname} && ${fileBasenameNoExtension}"
+        },
+
+        {
+            "taskName": "Build & Run",
+            "command": "",
+            "isBuildCommand": true,
+            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} && cd ${fileDirname} ${fileBasenameNoExtension}"]
+        }
+    ]
+}

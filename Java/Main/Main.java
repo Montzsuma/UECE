@@ -7,7 +7,7 @@ public class Main
         Hello.hello();
         Scanner n = new Scanner(System.in);
         int a = n.nextInt();
-        System.out.println(a);
+        System.out.println(a*2);
         n.close();
     }
 }

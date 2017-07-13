@@ -34,7 +34,7 @@
             "taskName": "Build & Run",
             "command": "",
             "isBuildCommand": true,
-            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} && cd ${fileDirname} ${fileBasenameNoExtension}"]
+            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} && ${fileBasenameNoExtension}"]
         }
     ]
 }

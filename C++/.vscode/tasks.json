@@ -1,40 +1,53 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-
-    "version": "0.1.0",
-    "isShellCommand": true,
-    "showOutput": "always",
-    "suppressTaskName": true,
-    "echoCommand": true,
-    "runner": "terminal",
-
+    "version": "2.0.0",
     "tasks": 
     [
         {
             "taskName": "Build",
-            "command": "",
-            "isBuildCommand": true,
-            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename}"]
+            "type": "shell",
+            "command": "cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename}",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
         },
-
-        {
-            "taskName": "Build & Run (OpenGL)",
-            "isBuildCommand": true,
-            "command": "",
-            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} -lopengl32 -lglut32 -lglu32 -lwinmm -lgdi32 && ${fileBasenameNoExtension}"]
-        },
-
+        
         {
             "taskName": "Run",
-            "command": "cd ${fileDirname} && ${fileBasenameNoExtension}"
+            "type": "shell",
+            "command": "cd ${fileDirname} && ${fileBasenameNoExtension}",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
         },
-
+        
         {
             "taskName": "Build & Run",
-            "command": "",
-            "isBuildCommand": true,
-            "args": ["cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} && ${fileBasenameNoExtension}"]
-        }
+            "type": "shell",
+            "command": "cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} && ${fileBasenameNoExtension}",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        },
+        
+        {
+            "taskName": "Build & Run (OpenGL)",
+            "type": "shell",
+            "command": "cd ${fileDirname} && g++ -o ${fileBasenameNoExtension} ${fileBasename} -lopengl32 -lglut32 -lglu32 -lwinmm -lgdi32 && ${fileBasenameNoExtension}",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        }    
     ]
 }

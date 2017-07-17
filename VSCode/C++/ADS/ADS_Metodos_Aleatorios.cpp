@@ -27,25 +27,6 @@ double Distribuicao_Geometrica_Inversa(double seed, double probability)
     return ceil(constant*log(1-seed));
 }
 
-/*
-
-TO DO:
-double Distribuicao_de_Poisson(double lambda)
-{
-    double constant = exp(-1*lambda);
-    bool accepted = false;
-    double n = 0, p = 1;
-    while(!accepted)
-    {
-        p = p*seed;
-        if(p < contant)
-            accepted*=-1;
-        n++;
-    }
-    return n;
-}
-*/
-
 int  main()
 {
     int seed = 27;

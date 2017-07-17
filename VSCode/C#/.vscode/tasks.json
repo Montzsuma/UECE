@@ -5,6 +5,19 @@
     "tasks":
     [
         {
+            "taskName": "Build with .bat :D",
+            "type": "shell",
+            "command": "cd ${cwd}/.vscode && build.bat ${fileDirname} ${fileBasename}",
+            "presentation":
+            {
+                "echo": true,
+                "panel": "shared",
+                "focus": true,
+                "reveal": "always"
+            }
+        },
+
+        {
             "taskName": "Build",
             "type": "shell",
             "command": "cd ${fileDirname} && csc ${fileBasename}",

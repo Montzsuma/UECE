@@ -1,0 +1,59 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": 
+    [
+        {
+            "taskName": "Build",
+            "command": "cd ${cwd}/.vscode && Commands.bat ${fileExtname} Build \"${fileDirname}\" ${fileBasename} ${fileBasenameNoExtension}",
+            "type": "shell",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+
+        {
+            "taskName": "Run",
+            "command": "cd ${cwd}/.vscode && Commands.bat ${fileExtname} Run \"${fileDirname}\" ${fileBasename} ${fileBasenameNoExtension}",
+            "type": "shell",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+
+        {
+            "taskName": "Build & Run",
+            "command": "cd ${cwd}/.vscode && Commands.bat ${fileExtname} BuildRun \"${fileDirname}\" ${fileBasename} ${fileBasenameNoExtension}",
+            "type": "shell",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+
+        {
+            "taskName": "Build & Run OpenGL",
+            "command": "cd ${cwd}/.vscode && Commands.bat ${fileExtname} BuildRun \"${fileDirname}\" ${fileBasename} ${fileBasenameNoExtension} OpenGL",
+            "type": "shell",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

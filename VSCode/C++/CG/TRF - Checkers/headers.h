@@ -1,9 +1,17 @@
+#pragma comment(lib, "freeglut.lib")
+#pragma comment(lib, "glu32.lib")
+#pragma comment(lib, "opengl32.lib")
+
 #include <iostream>
 #include <cmath>
 #include <windows.h>
-#include <glut.h>
+#include <GL\glut.h>
 #include <map>
 #include <algorithm>
+
+//g++ -o main main.cpp -lfreeglut -lopengl32 -lglu32 -lwinmm -lgdi32
+//#pragma comment(lib, "winmm.lib")
+//#pragma comment(lib, "gdi32.lib")
 
 #define LARGURA 600
 #define ALTURA 600
@@ -72,7 +80,7 @@ double last_press_x = 0, last_press_y = 0;
 int turn = -1, turn_anim = 0;
 
 //Variáveis para animar as peças:
-int move = -1, move_anim = -1, movimento;
+int move_piece = -1, move_anim = -1, movimento;
 int side = 1;
 
 //

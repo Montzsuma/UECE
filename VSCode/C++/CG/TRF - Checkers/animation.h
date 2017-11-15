@@ -69,7 +69,7 @@ void move_checker(int movimento)
             release();
 
             move_anim*=-1;
-            move = -1;
+            move_piece = -1;
         }
     }
 }

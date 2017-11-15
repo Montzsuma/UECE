@@ -61,7 +61,7 @@ void Anima(int value)
 		rotate_board();
 
 	//Verifica se uma peça e uma casa foram escolhidas, se sim iniciamos o movimento, se não liberamos a peça e a casa.
-	if(move == -1)
+	if(move_piece == -1)
 	{
 		if(checker_selected && board_selected)
 		{
@@ -70,7 +70,7 @@ void Anima(int value)
 				release();
 			else
 			{
-				move = 1;
+				move_piece = 1;
 				move_anim*=-1;
 			}
 		}
